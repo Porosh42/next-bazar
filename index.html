@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Next Bazar</title>
 
 <style>
@@ -13,19 +14,9 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, sans-serif;
     background:#fff;
-    color:#111;
-}
-
-button{
-    font-family:inherit;
-    cursor:pointer;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
+    color:#000;
 }
 
 /* ================= HEADER ================= */
@@ -35,775 +26,500 @@ header{
     top:0;
     z-index:1000;
     background:#fff;
-    border-bottom:1px solid #eee;
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    height:72px;
-    padding:0 20px;
+    border-bottom:1px solid #ddd;
+    height:75px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    padding:0 5%;
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
-    font-size:22px;
-    font-weight:800;
 }
 
 .logo img{
-    width:42px;
-    height:42px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
     object-fit:cover;
-    border-radius:50%;
 }
 
-.nav-links{
-    display:flex;
-    gap:28px;
-    list-style:none;
-}
-
-.nav-links a{
-    font-size:14px;
-    font-weight:600;
-}
-
-.nav-links a:hover{
-    text-decoration:underline;
-}
-
-.header-actions{
+nav{
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:25px;
 }
 
-.icon-btn{
-    position:relative;
-    width:42px;
-    height:42px;
-    border:0;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-}
-
-.icon-btn:hover{
-    background:#f3f3f3;
-}
-
-.icon-btn svg{
-    width:21px;
-    height:21px;
-}
-
-.cart-badge{
-    position:absolute;
-    top:2px;
-    right:1px;
-    min-width:18px;
-    height:18px;
-    padding:0 4px;
-    background:#111;
-    color:#fff;
-    border-radius:20px;
-    font-size:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+nav a{
+    text-decoration:none;
+    color:#000;
     font-weight:bold;
 }
 
-/* ================= SEARCH ================= */
-
-.search-box{
-    display:none;
-    border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
-    background:#fff;
+nav a:hover{
+    text-decoration:underline;
 }
 
-.search-box.active{
-    display:block;
-}
+/* ================= HEADER BUTTONS ================= */
 
-.search-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:12px 20px;
+.header-buttons{
     display:flex;
-    gap:10px;
+    align-items:center;
+    gap:18px;
 }
 
-.search-inner input{
-    flex:1;
-    height:45px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding:0 15px;
-    font-size:14px;
-    outline:none;
+.icon-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:25px;
 }
 
-.search-inner input:focus{
-    border-color:#111;
+/* SELLER ICON */
+
+.account-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
 }
 
-.close-search{
-    width:45px;
-    border:1px solid #ddd;
-    background:#fff;
-    border-radius:8px;
-    font-size:20px;
+.account-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:25px;
+}
+
+.seller-label{
+    font-size:11px;
+    font-weight:bold;
+    margin-top:3px;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.hero-content{
-    min-height:400px;
-    background:#f5f5f5;
-    border-radius:20px;
+    min-height:430px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:50px;
-    overflow:hidden;
+    padding:60px 8%;
+    background:#f7f7f7;
 }
 
 .hero-text{
-    max-width:520px;
-}
-
-.hero-text span{
-    display:inline-block;
-    background:#111;
-    color:#fff;
-    padding:7px 12px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-    margin-bottom:18px;
+    max-width:550px;
 }
 
 .hero-text h1{
-    font-size:52px;
-    line-height:1.05;
+    font-size:55px;
     margin-bottom:20px;
 }
 
 .hero-text p{
-    color:#666;
+    font-size:18px;
     line-height:1.6;
-    margin-bottom:25px;
+    color:#555;
+    margin-bottom:30px;
 }
 
 .shop-btn{
-    border:0;
-    background:#111;
+    display:inline-block;
+    background:#000;
     color:#fff;
-    padding:14px 24px;
-    border-radius:8px;
+    padding:14px 28px;
+    border-radius:5px;
+    text-decoration:none;
     font-weight:bold;
 }
 
 .shop-btn:hover{
-    opacity:.85;
+    background:#333;
 }
 
-.hero-image{
-    width:42%;
-    display:flex;
-    justify-content:center;
+.hero img{
+    width:350px;
+    max-width:45%;
+    border-radius:15px;
 }
 
-.hero-image img{
-    width:100%;
-    max-width:400px;
-    border-radius:20px;
-    object-fit:cover;
-}
+/* ================= SECTION ================= */
 
-/* ================= CATEGORIES ================= */
-
-.categories{
-    max-width:1200px;
-    margin:60px auto;
-    padding:0 20px;
+section{
+    padding:60px 7%;
 }
 
 .section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
+    text-align:center;
+    margin-bottom:40px;
 }
 
 .section-title h2{
-    font-size:28px;
+    font-size:35px;
 }
 
-.category-list{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.category{
-    border:1px solid #eee;
-    padding:22px;
-    border-radius:12px;
-    text-align:center;
-    background:#fff;
-    transition:.2s;
-}
-
-.category:hover{
-    background:#111;
-    color:#fff;
-    transform:translateY(-3px);
-}
-
-.category h3{
-    font-size:16px;
-    margin-bottom:7px;
-}
-
-.category p{
-    font-size:12px;
+.section-title p{
     color:#777;
-}
-
-.category:hover p{
-    color:#ddd;
+    margin-top:10px;
 }
 
 /* ================= PRODUCTS ================= */
 
 .products{
-    max-width:1200px;
-    margin:60px auto;
-    padding:0 20px;
-}
-
-.product-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
 .product-card{
-    position:relative;
-    border:1px solid #eee;
-    border-radius:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
     overflow:hidden;
     background:#fff;
-    transition:.25s;
+    transition:.3s;
 }
 
 .product-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transform:translateY(-5px);
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
 }
 
-.product-image{
-    height:280px;
-    background:#f5f5f5;
-    position:relative;
-    overflow:hidden;
-}
-
-.product-image img{
+.product-card img{
     width:100%;
-    height:100%;
+    height:220px;
     object-fit:cover;
-}
-
-.badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#111;
-    color:#fff;
-    padding:6px 9px;
-    border-radius:5px;
-    font-size:10px;
-    font-weight:bold;
-}
-
-.favorite{
-    position:absolute;
-    top:10px;
-    right:10px;
-    width:38px;
-    height:38px;
-    border:0;
-    border-radius:50%;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:20px;
-    z-index:2;
-}
-
-.favorite:hover{
-    background:#eee;
-}
-
-.favorite.active{
-    background:#111;
-    color:#fff;
 }
 
 .product-info{
     padding:18px;
 }
 
-.product-info p{
-    color:#777;
-    font-size:12px;
-    margin-bottom:8px;
-}
-
 .product-info h3{
-    font-size:18px;
     margin-bottom:8px;
 }
 
-.rating{
-    font-size:12px;
-    margin-bottom:12px;
-}
-
-.rating span{
+.category{
     color:#777;
+    font-size:14px;
+    margin-bottom:10px;
 }
 
 .price{
-    font-size:19px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.old-price{
-    font-size:13px;
-    color:#999;
-    text-decoration:line-through;
-    font-weight:normal;
-}
-
-.product-buttons{
-    display:flex;
-    gap:8px;
-    margin-top:15px;
-}
-
-.add-cart{
-    flex:1;
-    height:42px;
-    background:#111;
-    color:#fff;
-    border:0;
-    border-radius:7px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.add-cart:hover{
-    opacity:.85;
-}
-
-.cart-small{
-    width:44px;
-    height:42px;
-    background:#fff;
-    border:1px solid #ddd;
-    border-radius:7px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.cart-small:hover{
-    background:#f3f3f3;
-}
-
-.cart-small svg{
-    width:18px;
-}
-
-/* ================= NO RESULTS ================= */
-
-.no-results{
-    display:none;
-    text-align:center;
-    padding:50px 10px;
-    color:#777;
-    grid-column:1/-1;
-}
-
-.no-results.show{
-    display:block;
-}
-
-/* ================= CART OVERLAY ================= */
-
-.cart-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.4);
-    z-index:2000;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s;
-}
-
-.cart-overlay.active{
-    opacity:1;
-    visibility:visible;
-}
-
-/* ================= CART DRAWER ================= */
-
-.cart-drawer{
-    position:fixed;
-    top:0;
-    right:-430px;
-    width:420px;
-    max-width:95%;
-    height:100vh;
-    background:#fff;
-    z-index:2100;
-    display:flex;
-    flex-direction:column;
-    transition:.3s ease;
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
-}
-
-.cart-drawer.active{
-    right:0;
-}
-
-.cart-head{
-    height:70px;
-    padding:0 20px;
-    border-bottom:1px solid #eee;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.cart-head h2{
-    font-size:20px;
-}
-
-.close-cart{
-    width:38px;
-    height:38px;
-    border:0;
-    background:#f5f5f5;
-    border-radius:50%;
-    font-size:20px;
-}
-
-.cart-items{
-    flex:1;
-    overflow-y:auto;
-    padding:15px;
-}
-
-.empty-cart{
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#777;
-    font-size:14px;
-}
-
-.cart-item{
-    display:flex;
-    gap:12px;
-    padding:12px 0;
-    border-bottom:1px solid #eee;
-}
-
-.cart-item img{
-    width:75px;
-    height:75px;
-    border-radius:8px;
-    object-fit:cover;
-    background:#f5f5f5;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-info h4{
-    font-size:14px;
-    margin-bottom:5px;
-}
-
-.cart-item-info p{
-    color:#777;
-    font-size:12px;
-    margin-bottom:7px;
-}
-
-.cart-item-price{
-    font-size:14px;
-    font-weight:bold;
-}
-
-.qty-control{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    margin-top:9px;
-}
-
-.qty-control button{
-    width:25px;
-    height:25px;
-    border:1px solid #ddd;
-    background:#fff;
-    border-radius:5px;
-}
-
-.qty-control span{
-    min-width:20px;
-    text-align:center;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.remove-item{
-    border:0;
-    background:none;
-    color:#888;
-    font-size:12px;
-    margin-top:8px;
-}
-
-.remove-item:hover{
-    color:#111;
-}
-
-.cart-footer{
-    border-top:1px solid #eee;
-    padding:18px;
-}
-
-.cart-total{
-    display:flex;
-    justify-content:space-between;
-    font-size:18px;
+    font-size:21px;
     font-weight:bold;
     margin-bottom:15px;
 }
 
-.clear-cart{
-    width:100%;
-    height:42px;
+.product-actions{
+    display:flex;
+    gap:10px;
+}
+
+.add-cart{
+    flex:1;
+    border:none;
+    background:#000;
+    color:#fff;
+    padding:11px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.favorite{
+    width:45px;
+    border:1px solid #000;
     background:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.category-box{
     border:1px solid #ddd;
-    border-radius:7px;
-    font-weight:bold;
-    margin-bottom:8px;
+    padding:30px 15px;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
 }
 
-.checkout-btn{
-    width:100%;
-    height:45px;
-    background:#111;
+.category-box:hover{
+    background:#000;
     color:#fff;
-    border:0;
-    border-radius:7px;
-    font-weight:bold;
-}
-
-.checkout-btn:hover{
-    opacity:.85;
-}
-
-/* ================= TOAST ================= */
-
-.toast{
-    position:fixed;
-    left:50%;
-    bottom:25px;
-    transform:translate(-50%,20px);
-    background:#111;
-    color:#fff;
-    padding:12px 18px;
-    border-radius:8px;
-    font-size:13px;
-    z-index:3000;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s;
-}
-
-.toast.show{
-    opacity:1;
-    visibility:visible;
-    transform:translate(-50%,0);
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    margin-top:80px;
-    background:#111;
+    background:#000;
     color:#fff;
-    padding:45px 20px;
+    padding:40px 7%;
+    text-align:center;
 }
 
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
+footer p{
+    color:#ccc;
+    margin-top:10px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:3000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+    overflow:auto;
+}
+
+.modal-content{
+    background:#fff;
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
+    border-radius:12px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+    display:flex;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.tab{
+    border:1px solid #000;
+    background:#fff;
+    padding:10px 18px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.tab.active{
+    background:#000;
+    color:#fff;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.submit-btn{
+    background:#000;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* ================= DASHBOARD ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+    margin:20px 0;
+}
+
+.stat{
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+.stat p{
+    color:#777;
+}
+
+/* ================= TABLE ================= */
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#000;
+    color:#fff;
+}
+
+.action-btn{
+    border:none;
+    padding:7px 10px;
+    cursor:pointer;
+    border-radius:4px;
+    margin:2px;
+}
+
+.edit{
+    background:#ddd;
+}
+
+.delete{
+    background:#000;
+    color:#fff;
+}
+
+.approve{
+    background:#000;
+    color:#fff;
+}
+
+/* ================= CART ================= */
+
+.cart-drawer{
+    display:none;
+    position:fixed;
+    z-index:4000;
+    right:0;
+    top:0;
+    width:380px;
+    max-width:95%;
+    height:100%;
+    background:#fff;
+    box-shadow:-5px 0 20px rgba(0,0,0,.2);
+    padding:25px;
+    overflow:auto;
+}
+
+.cart-header{
     display:flex;
     justify-content:space-between;
-    gap:30px;
+    align-items:center;
+    margin-bottom:25px;
 }
 
-.footer-logo{
-    font-size:22px;
+.cart-item{
+    border-bottom:1px solid #ddd;
+    padding:15px 0;
+}
+
+.cart-item h4{
+    margin-bottom:5px;
+}
+
+.cart-total{
+    margin-top:25px;
+    font-size:20px;
     font-weight:bold;
-    margin-bottom:10px;
 }
 
-.footer-text{
-    color:#aaa;
-    font-size:13px;
-    max-width:350px;
-    line-height:1.6;
-}
-
-.footer-links{
-    display:flex;
-    gap:25px;
-    color:#aaa;
-    font-size:13px;
-}
-
-.footer-links a:hover{
+.checkout{
+    width:100%;
+    margin-top:15px;
+    padding:13px;
+    background:#000;
     color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
+.clear-cart{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    background:#fff;
+    color:#000;
+    border:1px solid #000;
+    border-radius:5px;
+    cursor:pointer;
+}
 
-@media(max-width:800px){
+/* ================= RESPONSIVE ================= */
 
-    .navbar{
-        height:65px;
+@media(max-width:768px){
+
+    header{
+        padding:0 3%;
     }
 
-    .nav-links{
+    nav{
         display:none;
     }
 
-    .hero-content{
-        min-height:auto;
-        padding:35px 25px;
+    .hero{
         flex-direction:column;
-        align-items:flex-start;
+        text-align:center;
         gap:30px;
     }
 
     .hero-text h1{
-        font-size:38px;
+        font-size:40px;
     }
 
-    .hero-image{
-        width:100%;
-    }
-
-    .category-list{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .product-image{
-        height:230px;
-    }
-
-    .footer-inner{
-        flex-direction:column;
-    }
-}
-
-@media(max-width:520px){
-
-    .navbar{
-        padding:0 12px;
-    }
-
-    .logo{
-        font-size:18px;
-    }
-
-    .logo img{
-        width:36px;
-        height:36px;
-    }
-
-    .header-actions{
-        gap:2px;
-    }
-
-    .hero{
-        margin:20px auto;
-    }
-
-    .hero-content{
-        border-radius:12px;
-    }
-
-    .hero-text h1{
-        font-size:32px;
-    }
-
-    .category-list{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-image{
-        height:280px;
-    }
-
-    .section-title h2{
-        font-size:23px;
-    }
-
-    .cart-drawer{
-        width:100%;
-        max-width:100%;
+    .hero img{
+        max-width:80%;
     }
 }
 </style>
@@ -815,155 +531,103 @@ footer{
 
 <header>
 
-    <div class="navbar">
-
-        <a href="#" class="logo">
-            <img src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg" alt="Next Bazar">
-            <span>Next Bazar</span>
-        </a>
-
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#products">Products</a></li>
-        </ul>
-
-        <div class="header-actions">
-
-            <!-- SEARCH -->
-            <button class="icon-btn search-toggle" aria-label="Search">
-
-                <svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <path d="m20 20-4-4"></path>
-
-                </svg>
-
-            </button>
-
-            <!-- CART -->
-            <button class="icon-btn cart-toggle" aria-label="Cart">
-
-                <svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-
-                    <path d="M6 6h15l-1.5 9h-12z"></path>
-                    <path d="M6 6 5 3H2"></path>
-                    <circle cx="9" cy="20" r="1"></circle>
-                    <circle cx="18" cy="20" r="1"></circle>
-
-                </svg>
-
-                <span class="cart-badge">0</span>
-
-            </button>
-
-        </div>
-
+    <div class="logo">
+        <img src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
+             alt="Next Bazar">
     </div>
 
-    <!-- SEARCH BOX -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+    </nav>
 
-    <div class="search-box" id="searchBox">
+    <div class="header-buttons">
 
-        <div class="search-inner">
+        <!-- SEARCH -->
+        <button class="icon-btn" onclick="focusSearch()">
+            🔍
+        </button>
 
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Search products..."
-                autocomplete="off"
-            >
-
-            <button class="close-search" id="closeSearch">
-                ×
+        <!-- SELLER -->
+        <div class="account-wrap">
+            <button class="account-btn" onclick="openAccountModal()">
+                👤
             </button>
-
+            <span class="seller-label">Seller</span>
         </div>
+
+        <!-- CART -->
+        <button class="icon-btn" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
 
     </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <div class="hero-text">
+        <h1>Next Bazar</h1>
 
-            <span>NEW COLLECTION</span>
+        <p>
+            Welcome to Next Bazar.
+            Shop your favourite products and discover
+            new sellers in one marketplace.
+        </p>
 
-            <h1>
-                Find Your<br>
-                Perfect Style
-            </h1>
-
-            <p>
-                Discover premium products made for your everyday life.
-                Simple design, great quality and better prices.
-            </p>
-
-            <a href="#products">
-                <button class="shop-btn">
-                    Shop Now →
-                </button>
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-
-            <img
-                src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
-                alt="Next Bazar"
-            >
-
-        </div>
+        <a href="#products" class="shop-btn">
+            Shop Now
+        </a>
 
     </div>
+
+    <img
+        src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
+        alt="Next Bazar">
 
 </section>
 
 
 <!-- ================= CATEGORIES ================= -->
 
-<section class="categories" id="categories">
+<section id="categories">
 
     <div class="section-title">
         <h2>Categories</h2>
+        <p>Choose your favourite category</p>
     </div>
 
-    <div class="category-list">
+    <div class="categories">
 
-        <div class="category">
-            <h3>Running</h3>
-            <p>Performance Shoes</p>
+        <div class="category-box"
+             onclick="filterCategory('Fashion')">
+            👕
+            <h3>Fashion</h3>
         </div>
 
-        <div class="category">
-            <h3>Lifestyle</h3>
-            <p>Everyday Style</p>
+        <div class="category-box"
+             onclick="filterCategory('Electronics')">
+            💻
+            <h3>Electronics</h3>
         </div>
 
-        <div class="category">
-            <h3>Basketball</h3>
-            <p>Game Ready</p>
+        <div class="category-box"
+             onclick="filterCategory('Shoes')">
+            👟
+            <h3>Shoes</h3>
         </div>
 
-        <div class="category">
-            <h3>New Arrivals</h3>
-            <p>Latest Products</p>
+        <div class="category-box"
+             onclick="filterCategory('Beauty')">
+            💄
+            <h3>Beauty</h3>
         </div>
 
     </div>
@@ -973,330 +637,396 @@ footer{
 
 <!-- ================= PRODUCTS ================= -->
 
-<section class="products" id="products">
+<section id="products">
 
     <div class="section-title">
+        <h2>Products</h2>
+        <p>Latest products from our sellers</p>
 
-        <h2>Featured Products</h2>
-
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search products..."
+            oninput="searchProducts()"
+            style="
+            margin-top:20px;
+            width:100%;
+            max-width:500px;
+            padding:13px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            ">
     </div>
 
-
-    <div class="product-grid" id="productGrid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <div
-            class="product-card"
-            data-id="aeroflex-pro"
-        >
-
-            <div class="product-image">
-
-                <img
-                    src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
-                    alt="AeroFlex Pro"
-                >
-
-                <span class="badge">
-                    NEW ARRIVAL
-                </span>
-
-                <button
-                    class="favorite"
-                    aria-label="Favorite"
-                >
-                    ♡
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <p>Running Shoes</p>
-
-                <h3>AeroFlex Pro</h3>
-
-                <div class="rating">
-                    ★★★★★ <span>4.8 (256)</span>
-                </div>
-
-                <div class="price">
-                    $89.99
-                    <span class="old-price">
-                        $129.99
-                    </span>
-                </div>
-
-
-                <div class="product-buttons">
-
-                    <button class="add-cart">
-                        ADD TO CART
-                    </button>
-
-                    <button
-                        class="cart-small"
-                        aria-label="Add to cart"
-                    >
-
-                        <svg viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-
-                            <path d="M6 6h15l-1.5 9h-12z"></path>
-                            <path d="M6 6 5 3H2"></path>
-                            <circle cx="9" cy="20" r="1"></circle>
-                            <circle cx="18" cy="20" r="1"></circle>
-
-                        </svg>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-
-        <div
-            class="product-card"
-            data-id="cloudstep-ultra"
-        >
-
-            <div class="product-image">
-
-                <img
-                    src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
-                    alt="CloudStep Ultra"
-                >
-
-                <span class="badge">
-                    BEST SELLER
-                </span>
-
-                <button
-                    class="favorite"
-                    aria-label="Favorite"
-                >
-                    ♡
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <p>Lifestyle Shoes</p>
-
-                <h3>CloudStep Ultra</h3>
-
-                <div class="rating">
-                    ★★★★★ <span>4.9 (512)</span>
-                </div>
-
-                <div class="price">
-                    $99.99
-                    <span class="old-price">
-                        $149.99
-                    </span>
-                </div>
-
-
-                <div class="product-buttons">
-
-                    <button class="add-cart">
-                        ADD TO CART
-                    </button>
-
-                    <button
-                        class="cart-small"
-                        aria-label="Add to cart"
-                    >
-
-                        <svg viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-
-                            <path d="M6 6h15l-1.5 9h-12z"></path>
-                            <path d="M6 6 5 3H2"></path>
-                            <circle cx="9" cy="20" r="1"></circle>
-                            <circle cx="18" cy="20" r="1"></circle>
-
-                        </svg>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-
-        <div
-            class="product-card"
-            data-id="powermax-2"
-        >
-
-            <div class="product-image">
-
-                <img
-                    src="https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
-                    alt="PowerMax 2.0"
-                >
-
-                <span class="badge">
-                    20% OFF
-                </span>
-
-                <button
-                    class="favorite"
-                    aria-label="Favorite"
-                >
-                    ♡
-                </button>
-
-            </div>
-
-
-            <div class="product-info">
-
-                <p>Basketball Shoes</p>
-
-                <h3>PowerMax 2.0</h3>
-
-                <div class="rating">
-                    ★★★★★ <span>4.7 (189)</span>
-                </div>
-
-                <div class="price">
-                    $79.99
-                    <span class="old-price">
-                        $99.99
-                    </span>
-                </div>
-
-
-                <div class="product-buttons">
-
-                    <button class="add-cart">
-                        ADD TO CART
-                    </button>
-
-                    <button
-                        class="cart-small"
-                        aria-label="Add to cart"
-                    >
-
-                        <svg viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-
-                            <path d="M6 6h15l-1.5 9h-12z"></path>
-                            <path d="M6 6 5 3H2"></path>
-                            <circle cx="9" cy="20" r="1"></circle>
-                            <circle cx="18" cy="20" r="1"></circle>
-
-                        </svg>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="no-results" id="noResults">
-            No products found.
-        </div>
-
-    </div>
+    <div class="products" id="productGrid"></div>
 
 </section>
 
 
+<!-- ================= SELLER / ADMIN MODAL ================= -->
+
+<div class="modal" id="accountModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeAccountModal()">
+            &times;
+        </span>
+
+        <h2>Next Bazar Marketplace</h2>
+
+        <p style="margin-top:8px;color:#777;">
+            Seller account, products and admin management
+        </p>
+
+        <div class="tabs">
+
+            <button class="tab active"
+                    onclick="showTab('loginTab',this)">
+                Login / Register
+            </button>
+
+            <button class="tab"
+                    onclick="showTab('sellerTab',this)">
+                Seller Dashboard
+            </button>
+
+            <button class="tab"
+                    onclick="showTab('adminTab',this)">
+                Admin Panel
+            </button>
+
+        </div>
+
+
+        <!-- ================= LOGIN ================= -->
+
+        <div class="tab-content active" id="loginTab">
+
+            <h3>Seller Login</h3>
+
+            <br>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="seller@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password">
+            </div>
+
+            <button class="submit-btn"
+                    onclick="sellerLogin()">
+                Login
+            </button>
+
+            <hr style="margin:30px 0;">
+
+            <h3>Create Seller Account</h3>
+
+            <br>
+
+            <div class="form-group">
+                <label>Seller Name</label>
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Your shop name">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="seller@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Password">
+            </div>
+
+            <button class="submit-btn"
+                    onclick="registerSeller()">
+                Register Seller
+            </button>
+
+        </div>
+
+
+        <!-- ================= SELLER DASHBOARD ================= -->
+
+        <div class="tab-content" id="sellerTab">
+
+            <h3>Seller Dashboard</h3>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3 id="sellerSales">৳0</h3>
+                    <p>Sales</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="sellerIncome">৳0</h3>
+                    <p>Seller 90%</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="commission">৳0</h3>
+                    <p>Commission 10%</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="sellerProducts">0</h3>
+                    <p>Products</p>
+                </div>
+
+            </div>
+
+
+            <h3>Add Product</h3>
+
+            <br>
+
+            <div class="form-group">
+                <label>Product Name</label>
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product name">
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+
+                <select id="productCategory">
+
+                    <option>Fashion</option>
+                    <option>Electronics</option>
+                    <option>Shoes</option>
+                    <option>Beauty</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label>Price</label>
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="1000">
+
+            </div>
+
+            <div class="form-group">
+                <label>Product Image URL</label>
+
+                <input
+                    type="text"
+                    id="productImage"
+                    placeholder="https://...">
+
+            </div>
+
+            <button class="submit-btn"
+                    onclick="addProduct()">
+                Add Product
+            </button>
+
+
+            <br><br>
+
+            <h3>My Products</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="sellerProductTable"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <br>
+
+            <h3>Orders</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Order</th>
+                            <th>Product</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="orderTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ADMIN PANEL ================= -->
+
+        <div class="tab-content" id="adminTab">
+
+            <h3>Admin Panel</h3>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3 id="adminSales">৳0</h3>
+                    <p>Platform Sales</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="adminCommission">৳0</h3>
+                    <p>Your Commission</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="adminSellers">0</h3>
+                    <p>Sellers</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="pendingProducts">0</h3>
+                    <p>Pending Products</p>
+                </div>
+
+            </div>
+
+
+            <h3>Seller Approval</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Seller</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="sellerTable"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <br>
+
+            <h3>Product Approval</h3>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Product</th>
+                            <th>Seller</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="adminProductTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 <!-- ================= CART ================= -->
 
-<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
 
-
-<aside class="cart-drawer" id="cartDrawer">
-
-    <div class="cart-head">
+    <div class="cart-header">
 
         <h2>Your Cart</h2>
 
         <button
-            class="close-cart"
-            id="closeCart"
-            aria-label="Close cart"
-        >
-            ×
+            onclick="closeCart()"
+            style="
+            border:none;
+            background:none;
+            font-size:25px;
+            cursor:pointer;">
+            &times;
         </button>
 
     </div>
 
+    <div id="cartItems"></div>
 
-    <div class="cart-items" id="cartItems">
-
-        <div class="empty-cart">
-            Your cart is empty.
-        </div>
-
+    <div class="cart-total">
+        Total: ৳<span id="cartTotal">0</span>
     </div>
 
+    <button class="checkout"
+            onclick="checkout()">
+        CHECKOUT
+    </button>
 
-    <div class="cart-footer">
+    <button class="clear-cart"
+            onclick="clearCart()">
+        Clear Cart
+    </button>
 
-        <div class="cart-total">
-
-            <span>Total</span>
-
-            <span id="cartTotal">
-                $0.00
-            </span>
-
-        </div>
-
-        <button
-            class="clear-cart"
-            id="clearCart"
-        >
-            CLEAR CART
-        </button>
-
-        <button
-            class="checkout-btn"
-            id="checkoutBtn"
-        >
-            CHECKOUT
-        </button>
-
-    </div>
-
-</aside>
-
-
-<!-- ================= TOAST ================= -->
-
-<div class="toast" id="toast">
-    Added to cart
 </div>
 
 
@@ -1304,169 +1034,945 @@ footer{
 
 <footer>
 
-    <div class="footer-inner">
+    <h2>Next Bazar</h2>
 
-        <div>
+    <p>
+        Your next online marketplace.
+    </p>
 
-            <div class="footer-logo">
-                Next Bazar
-            </div>
-
-            <p class="footer-text">
-                Your simple destination for quality products,
-                modern style and everyday essentials.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#home">Home</a>
-            <a href="#categories">Categories</a>
-            <a href="#products">Products</a>
-
-        </div>
-
-    </div>
+    <p>
+        © 2026 Next Bazar. All Rights Reserved.
+    </p>
 
 </footer>
 
 
 <script>
 
-/* =========================================
-   NEXT BAZAR
-   CART + SEARCH + FAVORITE
-========================================= */
+/* =====================================================
+   NEXT BAZAR MARKETPLACE DATA
+===================================================== */
 
+const COMMISSION_RATE = 0.10;
 
-/* ---------- STORAGE ---------- */
+let marketplace =
+    JSON.parse(
+        localStorage.getItem("nextBazarMarketplace")
+    ) || {
 
-let cart = JSON.parse(
-    localStorage.getItem("nextBazarCart") || "[]"
-);
+        sellers: [],
 
-let favorites = JSON.parse(
-    localStorage.getItem("nextBazarFavorites") || "[]"
-);
+        products: [],
 
+        orders: []
 
-/* ---------- ELEMENTS ---------- */
-
-const cartDrawer = document.getElementById("cartDrawer");
-const cartOverlay = document.getElementById("cartOverlay");
-const cartItems = document.getElementById("cartItems");
-const cartTotal = document.getElementById("cartTotal");
-const cartBadge = document.querySelector(".cart-badge");
-
-const cartToggle = document.querySelector(".cart-toggle");
-const closeCart = document.getElementById("closeCart");
-
-const clearCartBtn = document.getElementById("clearCart");
-const checkoutBtn = document.getElementById("checkoutBtn");
-
-const searchToggle = document.querySelector(".search-toggle");
-const searchBox = document.getElementById("searchBox");
-const searchInput = document.getElementById("searchInput");
-const closeSearch = document.getElementById("closeSearch");
-
-const productCards = document.querySelectorAll(".product-card");
-const noResults = document.getElementById("noResults");
-
-const toast = document.getElementById("toast");
-
-
-/* =========================================
-   PRODUCT DATA
-========================================= */
-
-function getProductData(card){
-
-    const priceText =
-        card.querySelector(".price").firstChild.textContent.trim();
-
-    return {
-
-        id: card.dataset.id,
-
-        name:
-            card.querySelector(".product-info h3")
-            .textContent.trim(),
-
-        category:
-            card.querySelector(".product-info p")
-            .textContent.trim(),
-
-        price:
-            Number(
-                priceText.replace(/[^0-9.]/g,"")
-            ),
-
-        image:
-            card.querySelector(".product-image img").src
     };
+
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("nextBazarCart")
+    ) || [];
+
+
+let currentSeller =
+    JSON.parse(
+        localStorage.getItem("nextBazarCurrentSeller")
+    ) || null;
+
+
+/* =====================================================
+   SAVE DATA
+===================================================== */
+
+function saveMarketplace(){
+
+    localStorage.setItem(
+        "nextBazarMarketplace",
+        JSON.stringify(marketplace)
+    );
+
 }
 
 
-/* =========================================
-   TOAST
-========================================= */
+/* =====================================================
+   ACCOUNT MODAL
+===================================================== */
 
-let toastTimer;
+function openAccountModal(){
 
-function showToast(message){
+    document.getElementById("accountModal").style.display =
+        "block";
 
-    toast.textContent = message;
+    renderDashboard();
 
-    toast.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer = setTimeout(function(){
-
-        toast.classList.remove("show");
-
-    },1800);
 }
 
 
-/* =========================================
-   OPEN CART
-========================================= */
+function closeAccountModal(){
 
-function openCart(){
+    document.getElementById("accountModal").style.display =
+        "none";
 
-    cartDrawer.classList.add("active");
-
-    cartOverlay.classList.add("active");
-
-    document.body.style.overflow = "hidden";
 }
 
 
-/* =========================================
-   CLOSE CART
-========================================= */
+window.onclick = function(event){
 
-function closeCartDrawer(){
+    const modal =
+        document.getElementById("accountModal");
 
-    cartDrawer.classList.remove("active");
+    if(event.target === modal){
 
-    cartOverlay.classList.remove("active");
+        closeAccountModal();
 
-    document.body.style.overflow = "";
+    }
+
 }
 
 
-/* =========================================
-   ADD TO CART
-========================================= */
+/* =====================================================
+   TABS
+===================================================== */
 
-function addToCart(product){
+function showTab(id, button){
+
+    document.querySelectorAll(".tab-content")
+        .forEach(tab => tab.classList.remove("active"));
+
+    document.querySelectorAll(".tab")
+        .forEach(tab => tab.classList.remove("active"));
+
+    document.getElementById(id)
+        .classList.add("active");
+
+    button.classList.add("active");
+
+    renderDashboard();
+
+}
+
+
+/* =====================================================
+   SELLER REGISTER
+===================================================== */
+
+function registerSeller(){
+
+    const name =
+        document.getElementById("registerName").value.trim();
+
+    const email =
+        document.getElementById("registerEmail").value.trim();
+
+    const password =
+        document.getElementById("registerPassword").value;
+
+    if(!name || !email || !password){
+
+        alert("সব তথ্য পূরণ করুন।");
+        return;
+
+    }
+
+    const exists =
+        marketplace.sellers.find(
+            seller => seller.email === email
+        );
+
+    if(exists){
+
+        alert("এই email দিয়ে আগে থেকেই account আছে।");
+        return;
+
+    }
+
+    const seller = {
+
+        id:Date.now(),
+
+        name:name,
+
+        email:email,
+
+        password:password,
+
+        approved:false
+
+    };
+
+    marketplace.sellers.push(seller);
+
+    saveMarketplace();
+
+    alert(
+        "Seller account তৈরি হয়েছে। Admin approval-এর পর seller account active হবে।"
+    );
+
+    document.getElementById("registerName").value="";
+    document.getElementById("registerEmail").value="";
+    document.getElementById("registerPassword").value="";
+
+    renderDashboard();
+
+}
+
+
+/* =====================================================
+   SELLER LOGIN
+===================================================== */
+
+function sellerLogin(){
+
+    const email =
+        document.getElementById("loginEmail").value.trim();
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+    const seller =
+        marketplace.sellers.find(
+            s =>
+            s.email === email &&
+            s.password === password
+        );
+
+    if(!seller){
+
+        alert("Email অথবা password ভুল।");
+        return;
+
+    }
+
+    if(!seller.approved){
+
+        alert(
+            "আপনার seller account এখনো Admin approve করেনি।"
+        );
+
+        return;
+
+    }
+
+    currentSeller = seller;
+
+    localStorage.setItem(
+        "nextBazarCurrentSeller",
+        JSON.stringify(currentSeller)
+    );
+
+    alert("Seller Login সফল হয়েছে!");
+
+    renderDashboard();
+
+}
+
+
+/* =====================================================
+   ADD PRODUCT
+===================================================== */
+
+function addProduct(){
+
+    if(!currentSeller){
+
+        alert(
+            "প্রথমে Seller Login করুন।"
+        );
+
+        return;
+
+    }
+
+    const name =
+        document.getElementById("productName").value.trim();
+
+    const category =
+        document.getElementById("productCategory").value;
+
+    const price =
+        Number(
+            document.getElementById("productPrice").value
+        );
+
+    const image =
+        document.getElementById("productImage").value.trim()
+        ||
+        "https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg";
+
+
+    if(!name || !price){
+
+        alert(
+            "Product name এবং price দিন।"
+        );
+
+        return;
+
+    }
+
+
+    const product = {
+
+        id:Date.now(),
+
+        sellerId:currentSeller.id,
+
+        sellerName:currentSeller.name,
+
+        name:name,
+
+        category:category,
+
+        price:price,
+
+        image:image,
+
+        approved:false
+
+    };
+
+
+    marketplace.products.push(product);
+
+    saveMarketplace();
+
+    alert(
+        "Product added হয়েছে। Admin approval-এর পর marketplace-এ দেখা যাবে।"
+    );
+
+
+    document.getElementById("productName").value="";
+    document.getElementById("productPrice").value="";
+    document.getElementById("productImage").value="";
+
+
+    renderDashboard();
+
+}
+
+
+/* =====================================================
+   APPROVE SELLER
+===================================================== */
+
+function approveSeller(id){
+
+    const seller =
+        marketplace.sellers.find(
+            s => s.id === id
+        );
+
+    if(!seller) return;
+
+    seller.approved = true;
+
+    saveMarketplace();
+
+    renderDashboard();
+
+}
+
+
+/* =====================================================
+   APPROVE PRODUCT
+===================================================== */
+
+function approveProduct(id){
+
+    const product =
+        marketplace.products.find(
+            p => p.id === id
+        );
+
+    if(!product) return;
+
+    product.approved = true;
+
+    saveMarketplace();
+
+    renderDashboard();
+
+    renderProducts();
+
+}
+
+
+/* =====================================================
+   DELETE PRODUCT
+===================================================== */
+
+function deleteProduct(id){
+
+    if(!confirm("Product delete করবেন?")){
+
+        return;
+
+    }
+
+    marketplace.products =
+        marketplace.products.filter(
+            p => p.id !== id
+        );
+
+    saveMarketplace();
+
+    renderDashboard();
+
+    renderProducts();
+
+}
+
+
+/* =====================================================
+   EDIT PRODUCT
+===================================================== */
+
+function editProduct(id){
+
+    const product =
+        marketplace.products.find(
+            p => p.id === id
+        );
+
+    if(!product) return;
+
+
+    const newName =
+        prompt(
+            "Product Name:",
+            product.name
+        );
+
+    if(newName === null) return;
+
+
+    const newPrice =
+        prompt(
+            "Price:",
+            product.price
+        );
+
+    if(newPrice === null) return;
+
+
+    product.name = newName;
+
+    product.price = Number(newPrice);
+
+    product.approved = false;
+
+
+    saveMarketplace();
+
+    alert(
+        "Product update হয়েছে। আবার Admin approval লাগবে।"
+    );
+
+    renderDashboard();
+
+    renderProducts();
+
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+function renderDashboard(){
+
+    let sellerSales = 0;
+
+    let sellerProducts = 0;
+
+
+    if(currentSeller){
+
+        const myProducts =
+            marketplace.products.filter(
+                p =>
+                p.sellerId === currentSeller.id
+            );
+
+        sellerProducts = myProducts.length;
+
+
+        marketplace.orders.forEach(order => {
+
+            order.items.forEach(item => {
+
+                const product =
+                    marketplace.products.find(
+                        p => p.id === item.id
+                    );
+
+                if(
+                    product &&
+                    product.sellerId === currentSeller.id
+                ){
+
+                    sellerSales +=
+                        product.price * item.qty;
+
+                }
+
+            });
+
+        });
+
+    }
+
+
+    const sellerIncome =
+        sellerSales * (1 - COMMISSION_RATE);
+
+    const commission =
+        sellerSales * COMMISSION_RATE;
+
+
+    document.getElementById("sellerSales")
+        .textContent =
+        "৳" + sellerSales.toFixed(0);
+
+
+    document.getElementById("sellerIncome")
+        .textContent =
+        "৳" + sellerIncome.toFixed(0);
+
+
+    document.getElementById("commission")
+        .textContent =
+        "৳" + commission.toFixed(0);
+
+
+    document.getElementById("sellerProducts")
+        .textContent =
+        sellerProducts;
+
+
+    /* ADMIN */
+
+    let platformSales = 0;
+
+
+    marketplace.orders.forEach(order => {
+
+        platformSales += order.total;
+
+    });
+
+
+    document.getElementById("adminSales")
+        .textContent =
+        "৳" + platformSales.toFixed(0);
+
+
+    document.getElementById("adminCommission")
+        .textContent =
+        "৳" +
+        (platformSales * COMMISSION_RATE)
+        .toFixed(0);
+
+
+    document.getElementById("adminSellers")
+        .textContent =
+        marketplace.sellers.length;
+
+
+    document.getElementById("pendingProducts")
+        .textContent =
+        marketplace.products.filter(
+            p => !p.approved
+        ).length;
+
+
+    /* SELLER PRODUCTS TABLE */
+
+    const sellerTable =
+        document.getElementById(
+            "sellerProductTable"
+        );
+
+
+    sellerTable.innerHTML = "";
+
+
+    if(currentSeller){
+
+        marketplace.products
+            .filter(
+                p =>
+                p.sellerId === currentSeller.id
+            )
+            .forEach(product => {
+
+                sellerTable.innerHTML += `
+
+                    <tr>
+
+                        <td>${escapeHTML(product.name)}</td>
+
+                        <td>৳${product.price}</td>
+
+                        <td>${escapeHTML(product.category)}</td>
+
+                        <td>
+
+                            <button
+                                class="action-btn edit"
+                                onclick="editProduct(${product.id})">
+                                Edit
+                            </button>
+
+                            <button
+                                class="action-btn delete"
+                                onclick="deleteProduct(${product.id})">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+            });
+
+    }
+
+
+    /* SELLER ORDERS */
+
+    const orderTable =
+        document.getElementById("orderTable");
+
+    orderTable.innerHTML = "";
+
+
+    marketplace.orders.forEach(order => {
+
+        order.items.forEach(item => {
+
+            const product =
+                marketplace.products.find(
+                    p => p.id === item.id
+                );
+
+            if(
+                product &&
+                currentSeller &&
+                product.sellerId === currentSeller.id
+            ){
+
+                orderTable.innerHTML += `
+
+                    <tr>
+
+                        <td>#${order.id}</td>
+
+                        <td>${escapeHTML(product.name)}</td>
+
+                        <td>
+                            ৳${product.price * item.qty}
+                        </td>
+
+                        <td>
+                            ${escapeHTML(order.status)}
+                        </td>
+
+                    </tr>
+
+                `;
+
+            }
+
+        });
+
+    });
+
+
+    /* ADMIN SELLER TABLE */
+
+    const adminSellerTable =
+        document.getElementById("sellerTable");
+
+
+    adminSellerTable.innerHTML = "";
+
+
+    marketplace.sellers.forEach(seller => {
+
+        adminSellerTable.innerHTML += `
+
+            <tr>
+
+                <td>${escapeHTML(seller.name)}</td>
+
+                <td>${escapeHTML(seller.email)}</td>
+
+                <td>
+                    ${
+                        seller.approved
+                        ? "Approved"
+                        : "Pending"
+                    }
+                </td>
+
+                <td>
+
+                    ${
+                        seller.approved
+                        ?
+                        "✓"
+                        :
+                        `
+                        <button
+                            class="action-btn approve"
+                            onclick="approveSeller(${seller.id})">
+                            Approve
+                        </button>
+                        `
+                    }
+
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+
+    /* ADMIN PRODUCT TABLE */
+
+    const adminProductTable =
+        document.getElementById(
+            "adminProductTable"
+        );
+
+
+    adminProductTable.innerHTML = "";
+
+
+    marketplace.products.forEach(product => {
+
+        adminProductTable.innerHTML += `
+
+            <tr>
+
+                <td>${escapeHTML(product.name)}</td>
+
+                <td>${escapeHTML(product.sellerName)}</td>
+
+                <td>৳${product.price}</td>
+
+                <td>
+                    ${
+                        product.approved
+                        ? "Approved"
+                        : "Pending"
+                    }
+                </td>
+
+                <td>
+
+                    ${
+                        product.approved
+                        ?
+                        "✓"
+                        :
+                        `
+                        <button
+                            class="action-btn approve"
+                            onclick="approveProduct(${product.id})">
+                            Approve
+                        </button>
+                        `
+                    }
+
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+function renderProducts(){
+
+    const grid =
+        document.getElementById(
+            "productGrid"
+        );
+
+
+    grid.innerHTML = "";
+
+
+    const products =
+        marketplace.products.filter(
+            p => p.approved
+        );
+
+
+    /* Default products */
+
+    const defaultProducts = [
+
+        {
+            id:"default1",
+            name:"AeroFlex Pro",
+            category:"Fashion",
+            price:1200,
+            image:"https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
+        },
+
+        {
+            id:"default2",
+            name:"CloudStep Ultra",
+            category:"Shoes",
+            price:1800,
+            image:"https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
+        },
+
+        {
+            id:"default3",
+            name:"PowerMax 2.0",
+            category:"Electronics",
+            price:2500,
+            image:"https://t4.ftcdn.net/jpg/18/13/56/99/240_F_1813569952_tDQLyUGtdTp63mMrgTTEVpupecNjlPQK.jpg"
+        }
+
+    ];
+
+
+    const allProducts =
+        [
+            ...defaultProducts,
+            ...products
+        ];
+
+
+    allProducts.forEach(product => {
+
+        grid.innerHTML += `
+
+            <div
+                class="product-card"
+                data-category="${escapeHTML(product.category)}">
+
+                <img
+                    src="${escapeHTML(product.image)}"
+                    alt="${escapeHTML(product.name)}">
+
+                <div class="product-info">
+
+                    <h3>
+                        ${escapeHTML(product.name)}
+                    </h3>
+
+                    <div class="category">
+                        ${escapeHTML(product.category)}
+                    </div>
+
+                    <div class="price">
+                        ৳${product.price}
+                    </div>
+
+                    <div class="product-actions">
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('${product.id}')">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="favorite"
+                            onclick="favoriteProduct(this)">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =====================================================
+   ADD CART
+===================================================== */
+
+function addToCart(id){
+
+    let product;
+
+
+    if(String(id).startsWith("default")){
+
+        const defaults = {
+
+            default1:{
+                id:"default1",
+                name:"AeroFlex Pro",
+                price:1200
+            },
+
+            default2:{
+                id:"default2",
+                name:"CloudStep Ultra",
+                price:1800
+            },
+
+            default3:{
+                id:"default3",
+                name:"PowerMax 2.0",
+                price:2500
+            }
+
+        };
+
+        product = defaults[id];
+
+    }else{
+
+        product =
+            marketplace.products.find(
+                p => String(p.id) === String(id)
+            );
+
+    }
+
+
+    if(!product){
+
+        alert("Product পাওয়া যায়নি।");
+        return;
+
+    }
+
 
     const existing =
-        cart.find(item => item.id === product.id);
+        cart.find(
+            item =>
+            String(item.id) === String(id)
+        );
+
 
     if(existing){
 
@@ -1476,7 +1982,11 @@ function addToCart(product){
 
         cart.push({
 
-            ...product,
+            id:product.id,
+
+            name:product.name,
+
+            price:product.price,
 
             qty:1
 
@@ -1484,18 +1994,22 @@ function addToCart(product){
 
     }
 
+
     saveCart();
 
-    renderCart();
+    updateCart();
 
-    showToast(product.name + " added to cart");
+    alert(
+        product.name +
+        " cart-এ যোগ হয়েছে।"
+    );
 
 }
 
 
-/* =========================================
-   SAVE CART
-========================================= */
+/* =====================================================
+   CART
+===================================================== */
 
 function saveCart(){
 
@@ -1507,509 +2021,307 @@ function saveCart(){
 }
 
 
-/* =========================================
-   RENDER CART
-========================================= */
+function openCart(){
 
-function renderCart(){
+    document.getElementById(
+        "cartDrawer"
+    ).style.display = "block";
 
-    /* BADGE */
+    updateCart();
 
-    const totalQuantity =
-        cart.reduce(
-            (total,item) => total + item.qty,
-            0
+}
+
+
+function closeCart(){
+
+    document.getElementById(
+        "cartDrawer"
+    ).style.display = "none";
+
+}
+
+
+function updateCart(){
+
+    const items =
+        document.getElementById(
+            "cartItems"
         );
 
-    cartBadge.textContent = totalQuantity;
+
+    items.innerHTML = "";
 
 
-    /* EMPTY */
+    let total = 0;
+
+    let count = 0;
+
+
+    cart.forEach(item => {
+
+        const itemTotal =
+            item.price * item.qty;
+
+        total += itemTotal;
+
+        count += item.qty;
+
+
+        items.innerHTML += `
+
+            <div class="cart-item">
+
+                <h4>
+                    ${escapeHTML(item.name)}
+                </h4>
+
+                <p>
+                    ৳${item.price}
+                    × ${item.qty}
+                </p>
+
+                <button
+                    class="action-btn"
+                    onclick="removeCartItem('${item.id}')">
+                    Remove
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+        total.toFixed(0);
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent =
+        count;
+
+}
+
+
+function removeCartItem(id){
+
+    cart =
+        cart.filter(
+            item =>
+            String(item.id) !== String(id)
+        );
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+function clearCart(){
+
+    cart = [];
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
+function checkout(){
 
     if(cart.length === 0){
 
-        cartItems.innerHTML = `
-            <div class="empty-cart">
-                Your cart is empty.
-            </div>
-        `;
-
-        cartTotal.textContent = "$0.00";
+        alert(
+            "Cart খালি।"
+        );
 
         return;
 
     }
 
 
-    /* CART ITEMS */
-
-    cartItems.innerHTML = cart.map(function(item){
-
-        const itemTotal =
-            item.price * item.qty;
-
-        return `
-
-            <div class="cart-item">
-
-                <img
-                    src="${item.image}"
-                    alt="${item.name}"
-                >
-
-                <div class="cart-item-info">
-
-                    <h4>
-                        ${item.name}
-                    </h4>
-
-                    <p>
-                        ${item.category}
-                    </p>
-
-                    <div class="cart-item-price">
-                        $${itemTotal.toFixed(2)}
-                    </div>
-
-                    <div class="qty-control">
-
-                        <button
-                            class="qty-minus"
-                            data-id="${item.id}"
-                        >
-                            −
-                        </button>
-
-                        <span>
-                            ${item.qty}
-                        </span>
-
-                        <button
-                            class="qty-plus"
-                            data-id="${item.id}"
-                        >
-                            +
-                        </button>
-
-                    </div>
-
-                    <button
-                        class="remove-item"
-                        data-id="${item.id}"
-                    >
-                        Remove
-                    </button>
-
-                </div>
-
-            </div>
-
-        `;
-
-    }).join("");
-
-
-    /* TOTAL */
-
     const total =
         cart.reduce(
             (sum,item) =>
-                sum + (item.price * item.qty),
+            sum + item.price * item.qty,
             0
         );
 
-    cartTotal.textContent =
-        "$" + total.toFixed(2);
+
+    const order = {
+
+        id:Date.now(),
+
+        items:[...cart],
+
+        total:total,
+
+        status:"Pending",
+
+        date:new Date().toLocaleString()
+
+    };
+
+
+    marketplace.orders.push(order);
+
+    saveMarketplace();
+
+
+    cart = [];
+
+    saveCart();
+
+    updateCart();
+
+    renderDashboard();
+
+
+    alert(
+        "Order তৈরি হয়েছে!\n\n" +
+        "Total: ৳" +
+        total +
+        "\n\n" +
+        "বর্তমানে এটি Demo Checkout। Real payment gateway এখনো যুক্ত করা হয়নি।"
+    );
 
 }
 
 
-/* =========================================
-   QUANTITY BUTTONS
-========================================= */
+/* =====================================================
+   SEARCH
+===================================================== */
 
-cartItems.addEventListener("click",function(e){
+function searchProducts(){
 
-    const minus =
-        e.target.closest(".qty-minus");
-
-    const plus =
-        e.target.closest(".qty-plus");
-
-    const remove =
-        e.target.closest(".remove-item");
+    const search =
+        document.getElementById(
+            "searchInput"
+        ).value.toLowerCase();
 
 
-    /* MINUS */
+    document.querySelectorAll(
+        ".product-card"
+    ).forEach(card => {
 
-    if(minus){
-
-        const id = minus.dataset.id;
-
-        const item =
-            cart.find(item => item.id === id);
-
-        if(item){
-
-            item.qty--;
-
-            if(item.qty <= 0){
-
-                cart =
-                    cart.filter(
-                        item => item.id !== id
-                    );
-
-            }
-
-        }
-
-        saveCart();
-
-        renderCart();
-
-    }
+        const text =
+            card.innerText.toLowerCase();
 
 
-    /* PLUS */
-
-    if(plus){
-
-        const id = plus.dataset.id;
-
-        const item =
-            cart.find(item => item.id === id);
-
-        if(item){
-
-            item.qty++;
-
-        }
-
-        saveCart();
-
-        renderCart();
-
-    }
-
-
-    /* REMOVE */
-
-    if(remove){
-
-        const id = remove.dataset.id;
-
-        cart =
-            cart.filter(
-                item => item.id !== id
-            );
-
-        saveCart();
-
-        renderCart();
-
-        showToast("Product removed");
-
-    }
-
-});
-
-
-/* =========================================
-   ADD CART BUTTONS
-========================================= */
-
-document.querySelectorAll(".add-cart, .cart-small")
-.forEach(function(button){
-
-    button.addEventListener("click",function(){
-
-        const card =
-            button.closest(".product-card");
-
-        const product =
-            getProductData(card);
-
-        addToCart(product);
+        card.style.display =
+            text.includes(search)
+            ? ""
+            : "none";
 
     });
 
-});
+}
 
 
-/* =========================================
+function focusSearch(){
+
+    const input =
+        document.getElementById(
+            "searchInput"
+        );
+
+
+    input.focus();
+
+    document.getElementById(
+        "products"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+function filterCategory(category){
+
+    document.getElementById(
+        "products"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+
+    document.querySelectorAll(
+        ".product-card"
+    ).forEach(card => {
+
+        const cardCategory =
+            card.dataset.category;
+
+
+        card.style.display =
+            cardCategory === category
+            ? ""
+            : "none";
+
+    });
+
+}
+
+
+/* =====================================================
    FAVORITE
-========================================= */
+===================================================== */
 
-document.querySelectorAll(".favorite")
-.forEach(function(button){
+function favoriteProduct(button){
 
-    const card =
-        button.closest(".product-card");
-
-    const id =
-        card.dataset.id;
-
-
-    /* RESTORE */
-
-    if(favorites.includes(id)){
-
-        button.classList.add("active");
+    if(button.textContent === "♡"){
 
         button.textContent = "♥";
 
-    }
-
-
-    button.addEventListener("click",function(){
-
-        if(favorites.includes(id)){
-
-            favorites =
-                favorites.filter(
-                    item => item !== id
-                );
-
-            button.classList.remove("active");
-
-            button.textContent = "♡";
-
-            showToast("Removed from favorites");
-
-        }else{
-
-            favorites.push(id);
-
-            button.classList.add("active");
-
-            button.textContent = "♥";
-
-            showToast("Added to favorites");
-
-        }
-
-
-        localStorage.setItem(
-            "nextBazarFavorites",
-            JSON.stringify(favorites)
-        );
-
-    });
-
-});
-
-
-/* =========================================
-   CART OPEN/CLOSE
-========================================= */
-
-cartToggle.addEventListener(
-    "click",
-    openCart
-);
-
-closeCart.addEventListener(
-    "click",
-    closeCartDrawer
-);
-
-cartOverlay.addEventListener(
-    "click",
-    closeCartDrawer
-);
-
-
-/* =========================================
-   ESC KEY
-========================================= */
-
-document.addEventListener("keydown",function(e){
-
-    if(e.key === "Escape"){
-
-        closeCartDrawer();
-
-        searchBox.classList.remove("active");
-
-    }
-
-});
-
-
-/* =========================================
-   CLEAR CART
-========================================= */
-
-clearCartBtn.addEventListener(
-    "click",
-    function(){
-
-        if(cart.length === 0){
-
-            showToast("Cart is already empty");
-
-            return;
-
-        }
-
-        cart = [];
-
-        saveCart();
-
-        renderCart();
-
-        showToast("Cart cleared");
-
-    }
-);
-
-
-/* =========================================
-   CHECKOUT
-========================================= */
-
-checkoutBtn.addEventListener(
-    "click",
-    function(){
-
-        if(cart.length === 0){
-
-            showToast("Your cart is empty");
-
-            return;
-
-        }
-
-        alert(
-            "Checkout system এখনও যুক্ত করা হয়নি।"
-        );
-
-    }
-);
-
-
-/* =========================================
-   SEARCH OPEN
-========================================= */
-
-searchToggle.addEventListener(
-    "click",
-    function(){
-
-        searchBox.classList.toggle("active");
-
-        if(searchBox.classList.contains("active")){
-
-            searchInput.focus();
-
-        }else{
-
-            searchInput.value = "";
-
-            filterProducts("");
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   CLOSE SEARCH
-========================================= */
-
-closeSearch.addEventListener(
-    "click",
-    function(){
-
-        searchInput.value = "";
-
-        filterProducts("");
-
-        searchBox.classList.remove("active");
-
-    }
-);
-
-
-/* =========================================
-   SEARCH FUNCTION
-========================================= */
-
-function filterProducts(search){
-
-    const query =
-        search.toLowerCase().trim();
-
-    let found = 0;
-
-
-    productCards.forEach(function(card){
-
-        const name =
-            card.querySelector("h3")
-            .textContent
-            .toLowerCase();
-
-        const category =
-            card.querySelector(".product-info p")
-            .textContent
-            .toLowerCase();
-
-
-        if(
-            name.includes(query) ||
-            category.includes(query)
-        ){
-
-            card.style.display = "";
-
-            found++;
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-
-    if(found === 0){
-
-        noResults.classList.add("show");
-
     }else{
 
-        noResults.classList.remove("show");
+        button.textContent = "♡";
 
     }
 
 }
 
 
-/* =========================================
-   SEARCH INPUT
-========================================= */
+/* =====================================================
+   SECURITY HELPER
+===================================================== */
 
-searchInput.addEventListener(
-    "input",
-    function(){
+function escapeHTML(value){
 
-        filterProducts(
-            searchInput.value
-        );
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 
-    }
-);
+}
 
 
-/* =========================================
-   INITIAL CART
-========================================= */
+/* =====================================================
+   START
+===================================================== */
 
-renderCart();
+renderProducts();
+
+updateCart();
+
+renderDashboard();
 
 </script>
 
